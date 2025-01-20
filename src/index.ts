@@ -1,1 +1,1 @@
-export * from "./hooks/useReadContract";
+export * from "./hooks/useWriteContract";
