@@ -23,10 +23,10 @@ module.exports = {
   },
   npm: {
     publish: false,
+    skipChecks: true,
   },
   github: {
-    release: false,
-    releaseName: `v${version}`,
+    release: true,
   },
   hooks: {
     'before:git:release': ['mvm-update', 'git add --all'],
