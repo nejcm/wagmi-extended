@@ -1,55 +1,26 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { MutateOptions } from '@tanstack/query-core';
-import { useCallback } from 'react';
-import type {
-  Abi,
-  Address,
-  ContractFunctionArgs,
-  ContractFunctionName,
-  WriteContractErrorType,
-} from 'viem';
-import {
-  Config,
-  UseWriteContractParameters,
-  useWriteContract as useWriteContractWagmi,
-} from 'wagmi';
+import { useCallback, useRef } from 'react';
+import type { Abi, ContractFunctionArgs, ContractFunctionName, WriteContractErrorType } from 'viem';
+import { Config, useWriteContract as useWriteContractWagmi } from 'wagmi';
 import { WriteContractData, WriteContractVariables } from 'wagmi/query';
-
-export type UseWriteContractProps<
-  abi extends Abi | readonly unknown[],
-  functionName extends ContractFunctionName<abi, 'nonpayable' | 'payable'>,
-  args extends ContractFunctionArgs<
-    abi,
-    'nonpayable' | 'payable',
-    functionName
-  >,
-> = UseWriteContractParameters & {
-  writeProps?: {
-    address?: Address;
-    abi?: abi;
-    functionName?: functionName;
-    args?: args;
-    chainId?: number;
-  };
-};
+import { UseWriteContractProps } from './types';
 
 export const useWriteContract = <
   abi extends Abi | readonly unknown[],
   functionName extends ContractFunctionName<abi, 'nonpayable' | 'payable'>,
-  args extends ContractFunctionArgs<
-    abi,
-    'nonpayable' | 'payable',
-    functionName
-  >,
+  args extends ContractFunctionArgs<abi, 'nonpayable' | 'payable', functionName>,
 >(
   parameters: UseWriteContractProps<abi, functionName, args> = {},
 ) => {
+  const writePropsRef = useRef(parameters.writeProps);
+  writePropsRef.current = parameters.writeProps;
   const mutation = useWriteContractWagmi(parameters);
+  const { writeContract: wc, writeContractAsync: wca } = mutation;
 
   const writeContract = useCallback(
     async (
-      args?: Partial<
-        WriteContractVariables<abi, functionName, args, Config, number>
-      >,
+      args?: Partial<WriteContractVariables<abi, functionName, args, Config, number>>,
       options?: MutateOptions<
         WriteContractData,
         WriteContractErrorType,
@@ -57,21 +28,17 @@ export const useWriteContract = <
         unknown
       >,
     ) => {
-      return mutation.writeContract(
-        {
-          ...parameters.writeProps,
-          ...args,
-        } as any, // because of optional arguments
-        options as any,
-      );
+      const mergedArgs = {
+        ...writePropsRef.current,
+        ...args,
+      } as any; // because of optional arguments
+      return wc(mergedArgs, options as any);
     },
-    [],
+    [wc],
   );
   const writeContractAsync = useCallback(
     async (
-      args?: Partial<
-        WriteContractVariables<abi, functionName, args, Config, number>
-      >,
+      args?: Partial<WriteContractVariables<abi, functionName, args, Config, number>>,
       options?: MutateOptions<
         WriteContractData,
         WriteContractErrorType,
@@ -79,15 +46,13 @@ export const useWriteContract = <
         unknown
       >,
     ) => {
-      return mutation.writeContractAsync(
-        {
-          ...parameters.writeProps,
-          ...args,
-        } as any, // because of optional arguments
-        options as any,
-      );
+      const mergedArgs = {
+        ...writePropsRef.current,
+        ...args,
+      } as any; // because of optional arguments
+      return wca(mergedArgs, options as any);
     },
-    [],
+    [wca],
   );
 
   return {

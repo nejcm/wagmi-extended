@@ -1,7 +1,7 @@
 {
-  "name": "wagmi-extended",
+  "name": "@nejcm/wagmi-extended",
   "version": "1.0.0",
-  "description": "Wagmi hooks extending base functionality",
+  "description": "Wagmi hooks extending functionality",
   "main": "dist/wagmi-extended.umd.js",
   "module": "dist/wagmi-extended.es.js",
   "types": "dist/types/index.d.ts",
@@ -10,7 +10,7 @@
   "license": "MIT",
   "scripts": {
     "build": "vite build && tsc --emitDeclarationOnly",
-    "lint": "eslint src --ext .ts,.tsx",
+    "lint": "eslint src/** && tsc --noEmit",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
     "test": "vitest"
   },
@@ -20,19 +20,31 @@
     "wagmi": ">=2.0.0"
   },
   "devDependencies": {
+    "@eslint/compat": "^1.2.5",
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.19.0",
+    "@tanstack/query-core": "^5.64.2",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@types/react": "^18.3.18",
+    "@typescript-eslint/eslint-plugin": "^8.21.0",
+    "@typescript-eslint/parser": "^8.21.0",
     "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "globals": "^15.14.0",
     "jsdom": "^26.0.0",
     "prettier": "^3.4.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "rimraf": "^6.0.1",
     "typescript": "^5.7.3",
+    "viem": "^2.22.9",
     "vite": "^6.0.7",
     "vitest": "^3.0.1",
-    "viem": "^2.22.9",
     "wagmi": "^2.14.8"
-  }
+  },
+  "packageManager": "yarn@4.6.0"
 }
