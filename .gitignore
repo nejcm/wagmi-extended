@@ -4,6 +4,7 @@ dist
 .DS_Store
 .env
 .idea
+.npmrc
 
 .yarn/*
 !.yarn/cache

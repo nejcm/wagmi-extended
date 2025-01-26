@@ -45,6 +45,12 @@ jobs:
       - name: 🔨 Build
         run: yarn build
 
+      # Authenticate with GitHub Package Registry
+      - name: Authenticate with GitHub Package Registry
+        run: echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" > .npmrc
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
       - name: 📦 Release packages
         run: yarn release
         env:
