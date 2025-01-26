@@ -19,8 +19,7 @@
     "lint": "eslint src/** && tsc --noEmit",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
     "test": "vitest",
-    "release": "release-it --ci",
-    "publish": "npm publish"
+    "release": "release-it --ci"
   },
   "peerDependencies": {
     "@tanstack/react-query": ">=5.0.0",
