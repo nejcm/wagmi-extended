@@ -40,6 +40,7 @@ const RAW_RUNTIME_STATE =
           ["@typescript-eslint/eslint-plugin", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:8.21.0"],\
           ["@typescript-eslint/parser", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:8.21.0"],\
           ["@vitejs/plugin-react", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:4.3.4"],\
+          ["conventional-changelog-conventionalcommits", "npm:8.0.0"],\
           ["eslint", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:9.19.0"],\
           ["eslint-config-prettier", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:10.0.1"],\
           ["eslint-plugin-react", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:7.37.4"],\
@@ -1432,6 +1433,7 @@ const RAW_RUNTIME_STATE =
           ["@typescript-eslint/eslint-plugin", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:8.21.0"],\
           ["@typescript-eslint/parser", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:8.21.0"],\
           ["@vitejs/plugin-react", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:4.3.4"],\
+          ["conventional-changelog-conventionalcommits", "npm:8.0.0"],\
           ["eslint", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:9.19.0"],\
           ["eslint-config-prettier", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:10.0.1"],\
           ["eslint-plugin-react", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:7.37.4"],\
@@ -4677,6 +4679,16 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../Users/Nejc/AppData/Local/Yarn/Berry/cache/conventional-changelog-angular-npm-8.0.0-80898aa2c5-10c0.zip/node_modules/conventional-changelog-angular/",\
         "packageDependencies": [\
           ["conventional-changelog-angular", "npm:8.0.0"],\
+          ["compare-func", "npm:2.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["conventional-changelog-conventionalcommits", [\
+      ["npm:8.0.0", {\
+        "packageLocation": "../../Users/Nejc/AppData/Local/Yarn/Berry/cache/conventional-changelog-conventionalcommits-npm-8.0.0-b17be6f278-10c0.zip/node_modules/conventional-changelog-conventionalcommits/",\
+        "packageDependencies": [\
+          ["conventional-changelog-conventionalcommits", "npm:8.0.0"],\
           ["compare-func", "npm:2.0.0"]\
         ],\
         "linkType": "HARD"\
