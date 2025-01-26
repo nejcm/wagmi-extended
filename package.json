@@ -60,5 +60,5 @@
     "vitest": "^3.0.1",
     "wagmi": "^2.14.8"
   },
-  "packageManager": "yarn@4.6.0"
+  "packageManager": "pnpm@10.0.0"
 }
