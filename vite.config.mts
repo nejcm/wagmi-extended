@@ -3,6 +3,10 @@ import { defineConfig } from 'vite';
 import { peerDependencies } from './package.json';
 
 const perDeps = Object.keys(peerDependencies);
+const perDepsGlobals = perDeps.reduce((acc, dep) => {
+  acc[dep] = dep;
+  return acc;
+}, {});
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -18,6 +22,7 @@ export default defineConfig({
       external: perDeps,
       output: {
         globals: {
+          ...perDepsGlobals,
           react: 'React',
           'react-dom': 'ReactDOM',
         },
