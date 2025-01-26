@@ -13,7 +13,8 @@
     "lint": "eslint src/** && tsc --noEmit",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
     "test": "vitest",
-    "release": "release-it --ci"
+    "release": "release-it --ci -VV",
+    "publish": "yarn publish"
   },
   "peerDependencies": {
     "@tanstack/react-query": ">=5.0.0",
