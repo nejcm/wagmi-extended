@@ -38,7 +38,6 @@ jobs:
       - name: 📋 Yarn Lock Changes
         uses: Simek/yarn-lock-changes@main
         with:
-          updateComment: 'true'
           token: ${{ secrets.GH_TOKEN }}
 
       - name: ✏️ Lint
