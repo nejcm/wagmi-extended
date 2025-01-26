@@ -2,7 +2,6 @@ const version = '${version}';
 
 module.exports = {
   plugins: {
-    "release-it-pnpm": {},
     '@release-it/conventional-changelog': {
       path: '.',
       infile: 'CHANGELOG.md',
