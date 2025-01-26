@@ -21,8 +21,8 @@ jobs:
       - name: ⚙️ Enable Corepack
         run: corepack enable
 
-      - name: 📦 Set Yarn Version
-        run: corepack prepare yarn@4.6.0 --activate
+      - name: 📦 Set pnpm Version
+        run: corepack use pnpm@latest-10
 
       - name: 💿 Setup Nodejs
         uses: actions/setup-node@v4
@@ -30,18 +30,13 @@ jobs:
           node-version: 22
           check-latest: true
           registry-url: 'https://npm.pkg.github.com'
-          cache: 'yarn'
+          cache: 'pnpm'
 
       - name: 🧩 Install dependencies
-        run: yarn install --immutable
-
-      - name: 📋 Yarn Lock Changes
-        uses: Simek/yarn-lock-changes@main
-        with:
-          token: ${{ secrets.GH_TOKEN }}
+        run: pnpm i --frozen-lockfile
 
       - name: ✏️ Lint
-        run: yarn lint
+        run: pnpm run lint
 
       - name: 🧪 Test
-        run: yarn test
+        run: pnpm run test

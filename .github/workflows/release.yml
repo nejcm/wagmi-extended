@@ -2,7 +2,7 @@ name: release
 
 on:
   push:
-    branches: [main, master]
+    branches: [main, master, develop]
   workflow_dispatch:
 
 jobs:
@@ -23,8 +23,8 @@ jobs:
       - name: ⚙️ Enable Corepack
         run: corepack enable
 
-      - name: 📦 Set Yarn Version
-        run: corepack prepare yarn@4.6.0 --activate
+      - name: 📦 Set pnpm Version
+        run: corepack use pnpm@latest-10
 
       - name: ⚙️ Git config
         run: |
@@ -37,15 +37,21 @@ jobs:
           node-version: 22
           check-latest: true
           registry-url: 'https://npm.pkg.github.com'
-          cache: 'yarn'
+          cache: 'pnpm'
 
       - name: 🧩 Install dependencies
-        run: yarn install --immutable
+        run: pnpm i --frozen-lockfile
 
       - name: 🔨 Build
-        run: yarn build
+        run: pnpm run build
+
+      # Authenticate with GitHub Package Registry
+      - name: Authenticate with GitHub Package Registry
+        run: echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" > .npmrc
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: 📦 Release packages
-        run: yarn release
+        run: pnpm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}

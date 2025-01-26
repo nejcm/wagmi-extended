@@ -3,8 +3,8 @@ import type { MutateOptions } from '@tanstack/react-query';
 import { useCallback, useRef } from 'react';
 import type { Abi, ContractFunctionArgs, ContractFunctionName, WriteContractErrorType } from 'viem';
 import { Config, useWriteContract as useWriteContractWagmi } from 'wagmi';
-import { WriteContractData, WriteContractVariables } from 'wagmi/query';
-import { UseWriteContractProps } from './types';
+import type { WriteContractData, WriteContractVariables } from 'wagmi/query';
+import { UseWriteContractProps, UseWriteContractReturnType } from './types';
 
 export const useWriteContract = <
   abi extends Abi | readonly unknown[],
@@ -12,7 +12,7 @@ export const useWriteContract = <
   args extends ContractFunctionArgs<abi, 'nonpayable' | 'payable', functionName>,
 >(
   parameters: UseWriteContractProps<abi, functionName, args> = {},
-) => {
+): UseWriteContractReturnType<abi, functionName, args> => {
   const writePropsRef = useRef(parameters.writeProps);
   writePropsRef.current = parameters.writeProps;
   const mutation = useWriteContractWagmi(parameters);
