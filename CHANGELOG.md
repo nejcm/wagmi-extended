@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.4](https://github.com/nejcm/wagmi-extended/compare/v0.0.3...v0.0.4) (2025-01-26)
+
+### Bug Fixes
+
+* ci ([d1f6b19](https://github.com/nejcm/wagmi-extended/commit/d1f6b19dd605bed35b5bf65edb80dde851bfcfef))
+* release ([f9978b7](https://github.com/nejcm/wagmi-extended/commit/f9978b78391ae1f123be4c6ac1846fa7bfecc980))
+
 ## [0.0.3](https://github.com/nejcm/wagmi-extended/compare/v0.0.2...v0.0.3) (2025-01-26)
 
 ## [0.0.3](https://github.com/nejcm/wagmi-extended/compare/v0.0.2...v0.0.3) (2025-01-26)
