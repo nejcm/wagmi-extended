@@ -1067,6 +1067,7 @@ __metadata:
     "@eslint/js": "npm:^9.19.0"
     "@semantic-release/changelog": "npm:^6.0.3"
     "@semantic-release/git": "npm:^10.0.1"
+    "@tanstack/query-core": "npm:^5.64.2"
     "@tanstack/react-query": "npm:^5.64.2"
     "@testing-library/jest-dom": "npm:^6.6.3"
     "@testing-library/react": "npm:^16.2.0"
@@ -2138,7 +2139,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/query-core@npm:5.64.2":
+"@tanstack/query-core@npm:5.64.2, @tanstack/query-core@npm:^5.64.2":
   version: 5.64.2
   resolution: "@tanstack/query-core@npm:5.64.2"
   checksum: 10c0/96dfaa334d2e3aeb3bcd55a3b8b3f3b4f7283b435d90681302ca6c08d0a597a5745c3c790d0242908266af6188efe804aac3c82ca8ed3fd7cd73c24220d93acc

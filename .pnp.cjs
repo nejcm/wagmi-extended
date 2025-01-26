@@ -32,6 +32,7 @@ const RAW_RUNTIME_STATE =
           ["@eslint/js", "npm:9.19.0"],\
           ["@semantic-release/changelog", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:6.0.3"],\
           ["@semantic-release/git", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:10.0.1"],\
+          ["@tanstack/query-core", "npm:5.64.2"],\
           ["@tanstack/react-query", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:5.64.2"],\
           ["@testing-library/jest-dom", "npm:6.6.3"],\
           ["@testing-library/react", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:16.2.0"],\
@@ -1423,6 +1424,7 @@ const RAW_RUNTIME_STATE =
           ["@eslint/js", "npm:9.19.0"],\
           ["@semantic-release/changelog", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:6.0.3"],\
           ["@semantic-release/git", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:10.0.1"],\
+          ["@tanstack/query-core", "npm:5.64.2"],\
           ["@tanstack/react-query", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:5.64.2"],\
           ["@testing-library/jest-dom", "npm:6.6.3"],\
           ["@testing-library/react", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:16.2.0"],\
@@ -3319,7 +3321,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@wagmi-core-virtual-663d380e66/3/Users/Nejc/AppData/Local/Yarn/Berry/cache/@wagmi-core-npm-2.16.3-5bcf0486d9-10c0.zip/node_modules/@wagmi/core/",\
         "packageDependencies": [\
           ["@wagmi/core", "virtual:b952d250c70311dd8d89bb87832029babf7b2ed6746721d68b7714bae8f23aee4f0c6cc2fe5e9730d0f0458a74ad48f1f3d98c562508171b3af18daeb5b05ae6#npm:2.16.3"],\
-          ["@tanstack/query-core", null],\
+          ["@tanstack/query-core", "npm:5.64.2"],\
           ["@types/tanstack__query-core", null],\
           ["@types/typescript", null],\
           ["@types/viem", null],\
@@ -12182,8 +12184,10 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/wagmi-virtual-b952d250c7/3/Users/Nejc/AppData/Local/Yarn/Berry/cache/wagmi-npm-2.14.9-f7e792e50d-10c0.zip/node_modules/wagmi/",\
         "packageDependencies": [\
           ["wagmi", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:2.14.9"],\
+          ["@tanstack/query-core", "npm:5.64.2"],\
           ["@tanstack/react-query", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:5.64.2"],\
           ["@types/react", "npm:18.3.18"],\
+          ["@types/tanstack__query-core", null],\
           ["@types/tanstack__react-query", null],\
           ["@types/typescript", null],\
           ["@types/viem", null],\
@@ -12195,8 +12199,10 @@ const RAW_RUNTIME_STATE =
           ["viem", "virtual:5622a9642259e12459802da7028db9ae11e99ba0924758baaf46dea576cd486019e3fccb00cbb524d3d7ec4109ec64eba79f459a8b1af2a15f57bbe83cb598a2#npm:2.22.14"]\
         ],\
         "packagePeers": [\
+          "@tanstack/query-core",\
           "@tanstack/react-query",\
           "@types/react",\
+          "@types/tanstack__query-core",\
           "@types/tanstack__react-query",\
           "@types/typescript",\
           "@types/viem",\
