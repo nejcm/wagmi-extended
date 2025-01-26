@@ -8,6 +8,9 @@
   "keywords": [],
   "author": "nejcm",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "build": "vite build && tsc --emitDeclarationOnly",
     "lint": "eslint src/** && tsc --noEmit",
