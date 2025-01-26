@@ -1,0 +1,44 @@
+name: release
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  release:
+    name: Running release
+    if: "!contains(toJSON(github.event.commits.*.message), 'chore(release):')"
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+
+    steps:
+      - name: 🛒 Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: ⚙️ Git config
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+
+      - name: 💿 Setup Nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: 'https://npm.pkg.github.com'
+          cache: 'yarn'
+
+      - name: 🧩 Install dependencies
+        run: yarn install --immutable
+
+      - name: 🔨 Build
+        run: yarn build --force
+
+      - name: 📦 Release packages
+        run: yarn release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
