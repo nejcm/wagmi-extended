@@ -22,7 +22,7 @@ module.exports = {
     requireCleanWorkingDir: false,
   },
   npm: {
-    publish: true,
+    publish: false,
   },
   github: {
     release: true,
