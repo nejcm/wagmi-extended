@@ -44,11 +44,11 @@ jobs:
       - name: 🔨 Build
         run: pnpm run build
 
-      # Authenticate with GitHub Package Registry
-      - name: Authenticate with GitHub Package Registry
-        run: echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" > .npmrc
+      # Authenticate with npm registry
+      - name: 🔒 Authenticate with npm registry
+        run: npm config set //registry.npmjs.org/:_authToken=${NPM_TOKEN}
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: 📦 Release packages
         run: pnpm run release

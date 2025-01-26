@@ -24,10 +24,8 @@ module.exports = {
   npm: {
     publish: true,
   },
-  github: {
-    release: true,
-  },
   hooks: {
     'before:git:release': ['git add --all'],
+    'after:release': ['pnpm run publish'],
   },
 };
