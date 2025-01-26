@@ -23,6 +23,9 @@ jobs:
       - name: ⚙️ Enable Corepack
         run: corepack enable
 
+      - name: 📦 Set Yarn Version
+        run: yarn set version 4.6.0
+
       - name: ⚙️ Git config
         run: |
           git config user.name "${GITHUB_ACTOR}"
@@ -35,9 +38,6 @@ jobs:
           check-latest: true
           registry-url: 'https://npm.pkg.github.com'
           cache: 'yarn'
-
-      - name: Install the correct Yarn version
-        run: yarn set version $(node -p 'require("./package.json").packageManager.replace("yarn@", "")')
 
       - name: 🧩 Install dependencies
         run: yarn install --immutable

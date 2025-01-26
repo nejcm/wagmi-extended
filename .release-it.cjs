@@ -22,7 +22,7 @@ module.exports = {
     requireCleanWorkingDir: false,
   },
   npm: {
-    publish: false,
+    publish: true,
     publishPath: 'https://npm.pkg.github.com',
   },
   github: {
@@ -30,6 +30,5 @@ module.exports = {
   },
   hooks: {
     'before:git:release': ['git add --all'],
-    'after:release': 'yarn publish',
   },
 };
