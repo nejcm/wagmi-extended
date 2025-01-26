@@ -10,8 +10,7 @@
   "license": "MIT",
   "scripts": {
     "build": "vite build && tsc --emitDeclarationOnly",
-    "lint": "eslint src/**",
-    "lint:ts": "tsc --noEmit",
+    "lint": "eslint src/** && tsc --noEmit",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
     "test": "vitest"
   },
@@ -34,6 +33,7 @@
     "eslint": "^9.19.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.1.0",
     "globals": "^15.14.0",
     "jsdom": "^26.0.0",
     "prettier": "^3.4.2",

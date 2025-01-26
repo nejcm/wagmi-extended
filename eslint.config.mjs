@@ -16,7 +16,12 @@ const compat = new FlatCompat({
 
 export default [
   ...fixupConfigRules(
-    compat.extends('plugin:@typescript-eslint/recommended', 'prettier'),
+    compat.extends(
+      'plugin:@typescript-eslint/recommended',
+      'plugin:@typescript-eslint/strict',
+      'plugin:react-hooks/recommended',
+      'prettier',
+    ),
   ),
   {
     files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
@@ -24,7 +29,6 @@ export default [
     languageOptions: {
       ...reactPlugin.configs.flat.recommended.languageOptions,
       globals: {
-        ...globals.serviceworker,
         ...globals.browser,
       },
     },

@@ -89,5 +89,7 @@ const MyComponent = () => {
 
 ## TODO
 
-- [] Add more useful overrides and functionality
-- [] Expand the docs and move them to GitHub pages with [Docusaurus](https://github.com/facebook/docusaurus)
+- [ ] Add more useful overrides and functionality
+  - [ ] Batch transaction support
+  - ...
+- [ ] Expand the docs and move them to GitHub pages with [Docusaurus](https://github.com/facebook/docusaurus)
