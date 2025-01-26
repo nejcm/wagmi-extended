@@ -36,6 +36,7 @@ export const useWriteContract = <
     },
     [wc],
   );
+
   const writeContractAsync = useCallback(
     async (
       args?: Partial<WriteContractVariables<abi, functionName, args, Config, number>>,
