@@ -13,8 +13,7 @@
     "lint": "eslint src/** && tsc --noEmit",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
     "test": "vitest",
-    "release": "semantic-release",
-    "setup:vscode": "yarn dlx @yarnpkg/sdks vscode"
+    "release": "release-it"
   },
   "peerDependencies": {
     "@tanstack/react-query": ">=5.0.0",
@@ -25,10 +24,10 @@
     "@eslint/compat": "^1.2.5",
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.19.0",
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
+    "@release-it/conventional-changelog": "^10.0.0",
     "@tanstack/query-core": "^5.64.2",
     "@tanstack/react-query": "^5.64.2",
+    "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@types/react": "^18.3.18",
@@ -45,8 +44,9 @@
     "prettier": "^3.4.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "release-it": "^18.1.2",
+    "release-it-pnpm": "^4.6.4",
     "rimraf": "^6.0.1",
-    "semantic-release": "^24.2.1",
     "typescript": "^5.7.3",
     "viem": "^2.22.9",
     "vite": "^6.0.7",
