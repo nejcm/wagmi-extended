@@ -17,7 +17,7 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
     "test": "vitest",
     "release": "release-it --ci",
-    "publish": "yarn publish"
+    "publish": "yarn publish --verbose"
   },
   "peerDependencies": {
     "@tanstack/react-query": ">=5.0.0",
