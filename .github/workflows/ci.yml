@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
 
       - name: ⚙️ Enable Corepack
         run: corepack enable
@@ -39,7 +39,7 @@ jobs:
         uses: Simek/yarn-lock-changes@main
         with:
           updateComment: 'true'
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
 
       - name: ✏️ Lint
         run: yarn lint
