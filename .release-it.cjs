@@ -23,7 +23,6 @@ module.exports = {
   },
   npm: {
     publish: true,
-    publishPath: 'https://npm.pkg.github.com',
   },
   github: {
     release: true,

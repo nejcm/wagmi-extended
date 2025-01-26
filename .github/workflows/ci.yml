@@ -29,7 +29,6 @@ jobs:
         with:
           node-version: 22
           check-latest: true
-          registry-url: 'https://npm.pkg.github.com'
           cache: 'pnpm'
 
       - name: 🧩 Install dependencies

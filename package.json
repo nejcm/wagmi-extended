@@ -8,9 +8,6 @@
   "keywords": [],
   "author": "nejcm",
   "license": "MIT",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "files": [
     "dist"
   ],
