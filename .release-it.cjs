@@ -29,5 +29,6 @@ module.exports = {
   },
   hooks: {
     'before:git:release': ['git add --all'],
+    'after:release': 'yarn publish',
   },
 };
