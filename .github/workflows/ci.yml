@@ -18,10 +18,17 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: ⚙️ Enable Corepack
+        run: corepack enable
+
+      - name: 📦 Set Yarn Version
+        run: corepack prepare yarn@4.6.0 --activate
+
       - name: 💿 Setup Nodejs
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          check-latest: true
           registry-url: 'https://npm.pkg.github.com'
           cache: 'yarn'
 
