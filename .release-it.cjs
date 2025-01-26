@@ -2,6 +2,7 @@ const version = '${version}';
 
 module.exports = {
   plugins: {
+    'release-it-pnpm': {},
     '@release-it/conventional-changelog': {
       path: '.',
       infile: 'CHANGELOG.md',
@@ -28,6 +29,6 @@ module.exports = {
     release: true,
   },
   hooks: {
-    'before:git:release': ['mvm-update', 'git add --all'],
+    'before:git:release': ['git add --all'],
   },
 };
