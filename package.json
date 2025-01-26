@@ -1,6 +1,6 @@
 {
   "name": "@nejcm/wagmi-extended",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Wagmi hooks extending functionality",
   "main": "dist/wagmi-extended.umd.js",
   "module": "dist/wagmi-extended.es.js",
