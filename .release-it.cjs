@@ -26,6 +26,6 @@ module.exports = {
   },
   hooks: {
     'before:git:release': ['git add --all'],
-    'after:release': ['pnpm run publish'],
+    // 'after:release': ['pnpm run publish'],
   },
 };
