@@ -36,7 +36,7 @@ jobs:
         run: yarn install --immutable
 
       - name: 🔨 Build
-        run: yarn build --force
+        run: yarn build
 
       - name: 📦 Release packages
         run: yarn release

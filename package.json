@@ -13,7 +13,8 @@
     "lint": "eslint src/** && tsc --noEmit",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
     "test": "vitest",
-    "release": "semantic-release"
+    "release": "semantic-release",
+    "setup:vscode": "yarn dlx @yarnpkg/sdks vscode"
   },
   "peerDependencies": {
     "@tanstack/react-query": ">=5.0.0",

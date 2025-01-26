@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { MutateOptions } from '@tanstack/query-core';
+import type { MutateOptions } from '@tanstack/react-query';
 import { useCallback, useRef } from 'react';
 import type { Abi, ContractFunctionArgs, ContractFunctionName, WriteContractErrorType } from 'viem';
 import { Config, useWriteContract as useWriteContractWagmi } from 'wagmi';
