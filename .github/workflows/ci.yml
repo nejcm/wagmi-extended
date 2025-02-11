@@ -18,10 +18,11 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GH_TOKEN }}
 
-      - name: ⚙️ Setup corepack and pnpm
-        run: |
-          corepack enable
-          corepack prepare pnpm@10.0.0 --activate --fresh
+      - name: ⚙️ Enable Corepack
+        run: corepack enable
+
+      - name: 📦 Set pnpm Version
+        run: corepack prepare pnpm@10.0.0 --activate
 
       - name: 💿 Setup Nodejs
         uses: actions/setup-node@v4
