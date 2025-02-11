@@ -39,6 +39,11 @@ const MyComponent = () => {
       abi: erc20Abi,
       functionName: 'approve',
     },
+    mutation: {
+      onSuccess: (response, variables) => { // correctly infers types
+        ...
+      },
+    },
   });
 
   const handleWrite = async () => {
@@ -86,6 +91,30 @@ const MyComponent = () => {
 - **Returns**: Return type is the same as the default [useContractWrite](https://wagmi.sh/react/api/hooks/useContractWrite) hook with the following two methods overridden to allow optional arguments:
   - `writeContract`: A function to execute the contract write operation.
   - `writeContractAsync`: An async version of `writeContract`.
+
+## Contributing
+
+Contributions are welcome!
+
+To contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your changes.
+3. Make your changes and commit them with descriptive commit messages.
+4. Push your changes to your forked repository.
+5. Create a pull request to the main repository.
+
+### Running the project locally
+
+To run the project locally, follow these steps:
+
+1. Clone the repository.
+2. Install the dependencies by running `pnpm install`.
+3. Build the project `pnpm run build`.
+
+## License
+
+This project is licensed under the MIT License.
 
 ## TODO
 

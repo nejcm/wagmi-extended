@@ -6,8 +6,8 @@ import type {
   ContractFunctionName,
   WriteContractErrorType,
 } from 'viem';
-import { Config, useWriteContract, UseWriteContractParameters } from 'wagmi';
-import type { WriteContractData, WriteContractVariables } from 'wagmi/query';
+import { Config, useWriteContract } from 'wagmi';
+import type { UseMutationParameters, WriteContractData, WriteContractVariables } from 'wagmi/query';
 
 export type WriteProps<
   abi extends Abi | readonly unknown[],
@@ -25,8 +25,14 @@ export type UseWriteContractProps<
   abi extends Abi | readonly unknown[],
   functionName extends ContractFunctionName<abi, 'nonpayable' | 'payable'>,
   args extends ContractFunctionArgs<abi, 'nonpayable' | 'payable', functionName>,
-> = UseWriteContractParameters & {
+> = {
   writeProps?: WriteProps<abi, functionName, args>;
+  mutation?: UseMutationParameters<
+    WriteContractData,
+    WriteContractErrorType,
+    WriteContractVariables<abi, functionName, args, Config, number>,
+    unknown
+  >;
 };
 
 export type UseWriteContractReturnType<

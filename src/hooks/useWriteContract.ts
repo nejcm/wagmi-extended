@@ -15,7 +15,7 @@ export const useWriteContract = <
 ): UseWriteContractReturnType<abi, functionName, args> => {
   const writePropsRef = useRef(parameters.writeProps);
   writePropsRef.current = parameters.writeProps;
-  const mutation = useWriteContractWagmi(parameters);
+  const mutation = useWriteContractWagmi(parameters as any); // problem with type miss-match because of generics
   const { writeContract: wc, writeContractAsync: wca } = mutation;
 
   const writeContract = useCallback(
