@@ -20,11 +20,10 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GH_TOKEN }}
 
-      - name: ⚙️ Enable Corepack
-        run: corepack enable
-
-      - name: 📦 Set pnpm Version
-        run: corepack use pnpm@10.0.0
+      - name: ⚙️ Setup corepack and pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@10.0.0 --activate --fresh
 
       - name: ⚙️ Git config
         run: |
