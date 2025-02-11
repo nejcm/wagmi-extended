@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.5](https://github.com/nejcm/wagmi-extended/compare/v0.0.4...v0.0.5) (2025-02-11)
+
+### Bug Fixes
+
+* mutation types ([83fc776](https://github.com/nejcm/wagmi-extended/commit/83fc776fe66c44f0795031c0dedb109ec4c7b97d))
+
 ## [0.0.4](https://github.com/nejcm/wagmi-extended/compare/v0.0.3...v0.0.4) (2025-01-26)
 
 ## [0.0.3](https://github.com/nejcm/wagmi-extended/compare/v0.0.2...v0.0.3) (2025-01-26)
