@@ -24,7 +24,7 @@ jobs:
         run: corepack enable
 
       - name: 📦 Set pnpm Version
-        run: corepack use pnpm@latest-10
+        run: corepack use pnpm@10.0.0
 
       - name: ⚙️ Git config
         run: |
